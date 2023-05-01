@@ -2,7 +2,7 @@
 
 # LYGIA Shader Library 
 
-Tired of searching, porting and/or reimplementing the same functions over and over? LYGIA is a shader library of reusable functions that can be include easily on your projects. LYGIA is very granular, designed for reusability, performance and flexibility. And can be easily be added to any projects and frameworks.
+Tired of searching, porting and/or reimplementing the same functions over and over? LYGIA is a shader library of reusable functions that can easily be included in your projects. It's very granular, designed for reusability, performance and flexibility. And again, it can easily be added to any projects and frameworks.
 
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/patriciogonzalezvivo)
 
@@ -72,7 +72,7 @@ or as a submodule:
 
 ### LYGIA on the cloud
 
-If you are working on a **cloud platform** probably you want to resolve the dependencies without needing to install anything. Just add a link to `https://lygia.xyz/resolve.js` (JS) or `https://lygia.xyz/resolve.esm.js` (ES6 module): 
+If you are working on a **cloud platform**, then you probably want to resolve the dependencies without needing to install anything. Just add a link to `https://lygia.xyz/resolve.js` (JS) or `https://lygia.xyz/resolve.esm.js` (ES6 module): 
 
 ```html
     <!-- as a JavaScript source -->
@@ -84,7 +84,7 @@ If you are working on a **cloud platform** probably you want to resolve the depe
     </script>
 ```
 
-To then resolve the dependencies by passing a `string` or `strings[]` to `resolveLygia()` or `resolveLygiaAsync()`:
+Then resolve the dependencies by passing a `string` or `strings[]` to `resolveLygia()` or `resolveLygiaAsync()`:
 
 ```js
     // 1. FIRST
@@ -148,7 +148,7 @@ The functions are divided in different categories:
 
 ### Flexible how?
 
-There are some functions whose behaviour can be changed using the `#defines` keyword before including it. For example, [gaussian blurs](filter/gaussianBlur.glsl) are usually are done in two passes. By default, these are performed on their 1D version, but in the case you are interested on using a 2D kernel, all in the same pass, you will need to add the `GAUSSIANBLUR_2D` keyword this way:
+There are some functions whose behaviour can be changed using the `#defines` keyword before including them. For example, [gaussian blurs](filter/gaussianBlur.glsl) are usually done in two passes. By default, these are performed on their single dimension version, but in the case you are interested on using a 2D kernel─all in the same pass─you will need to add the `GAUSSIANBLUR_2D` keyword this way:
 
 ```glsl
 
@@ -194,7 +194,7 @@ Here you can find some implementations on different languages:
 
     . [webpack glsl plugin (local bundle)](https://github.com/grieve/webpack-glsl-loader) by Ryan Grieve that import local `.glsl` dependencies through webpack.
         
-* It's **very granular**. One function per file. The file and the function share the same name, namely: `myFunc.glsl` contains `myFunct()`. There are some files that just include a collection of files inside a folder with the same name. For example:
+* It's **very granular**. One function per file. The file and the function share the same name, namely: `myFunc.glsl` contains `myFunct()`. And there exporting files that only include paths to other files. For example:
 
 ```
     color/blend.glsl
@@ -203,7 +203,7 @@ Here you can find some implementations on different languages:
 
 ```
 
-* It's **multi language**. Right now most of is GLSL (`*.glsl`) and HLSL (`*.hlsl`), but we are slowly extending to WGSL (`*.wgsl`), CUDA (`*.cuh`) and Metal (`*.msl`).
+* It's **multi language**. Right now most of it is GLSL (`*.glsl`) and HLSL (`*.hlsl`), but we are slowly extending to WGSL (`*.wgsl`), CUDA (`*.cuh`) and Metal (`*.msl`).
 
 ```
     math/mirror.glsl
@@ -213,7 +213,7 @@ Here you can find some implementations on different languages:
     math/mirror.cuh
 ```
 
-* **Self documented**. Each file contains a structured comment (in YAML) at the top of the file. This one contains the name of the original author, description, use and `#define` options
+* **Self documented**. Each file contains a structured comment (in YAML) at the top. For example this one contains the name of the original author, description, use and `#define` options
 
 ```glsl
 
@@ -243,7 +243,7 @@ Here you can find some implementations on different languages:
 
 ```
 
-* **Templating capabilities through `#defines`**. Probably the most frequent use is templating the sampling function for reusability. The `#define` options start with the name of the function, in this example `MYFUNC_`. They are added as `options:` in the header.
+* **Templating capabilities through `#defines`**. Probably the most frequent use is templating the sampling function for reusability. The `#define` options starts with the name of the function, in this example `MYFUNC_`. They are added as `options:` in the header.
  
 ```glsl
 
@@ -292,7 +292,7 @@ Here you can find some implementations on different languages:
 
 ## Contributions
 
-LYGIA have a long way to go. Your support will be appreciated and rewarded (all contributors are automatically added to the [commercial license](https://lygia.xyz/license) ). This support can take multiple forms:
+LYGIA has a long way to go. Your support will be appreciated and rewarded (all contributors are automatically added to the [commercial license](https://lygia.xyz/license) ). This support can take multiple forms:
 
 * fixing bugs!
 * expanding the crosscompatibility between languages GLSL/HLSL/MSL/WGSL/CUDA
